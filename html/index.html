@@ -15,29 +15,68 @@
 <body>
     <div class="global-container">
         <div class="card login-form">
+            <h3 class="card-title text-center">Log in to Chat</h3>
+
+            <div class="tab">
+                <button class="tablinks" onclick="login(event, 'Sing_in')">Sing in</button>
+                <button class="tablinks" onclick="login(event, 'Sing_up')">Sing up</button>
+            </div>
+
             <div class="card-body">
-                <h3 class="card-title text-center">Log in to Codepen</h3>
                 <form class="card-text">
-                    <!--
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
+                <div id="Sing_in" class="tabcontent">
                     <form>
-                        <!-- to error: add class "has-danger" -->
                         <div class="form-group">
-                            <label for="exampleInputEmail1">username</label>
-                            <input type="username" class="form-control form-control-sm" id="exampleInputEmail1"
+                            <label for="username">Usuario</label>
+                            <input type="username" class="form-control form-control-sm" id="username"
+                                aria-describedby="emailHelp">
+                        </div><div class="form-group">
+                            <label for="nickname">Nickname</label>
+                            <input type="nickname" class="form-control form-control-sm" id="nickname"
                                 aria-describedby="emailHelp">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">nickname</label>
-                            <!-- <a href="#" style="float:right;font-size:12px;">Forgot password?</a> -->
-                            <input type="nickname" class="form-control form-control-sm" id="exampleInputPassword1">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control form-control-sm" id="password">
                         </div>
                         <a href="chat.html" class="btn btn-primary btn-block">Link Button</a>
                     </form>
                 </div>
+
+                <div id="Sing_up" class="tabcontent">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">username</label>
+                                <input type="username" class="form-control form-control-sm" id="username"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">password</label>
+                                <input type="password" class="form-control form-control-sm" id="password">
+                            </div>
+                            <a href="chat.html" class="btn btn-primary btn-block">Link Button</a>
+                        </form>
+                    </div>
             </div>
         </div>
     </div>
+    </div>
+
+    <script>
+            function openCity(evt, name) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(name).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
