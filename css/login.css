@@ -17,7 +17,9 @@ form{
 	margin-top: 30px;
 }
 
-.card-title{ font-weight:300; }
+.card-title{
+	margin: 10px; 
+	font-weight:300; }
 
 .btn{
 	font-size: 14px;
@@ -43,14 +45,19 @@ form{
 
 /* Style the tab */
 .tab {
+  text-align: center;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  width: 180px;
+  margin: 50px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
+  border: 1px;
+  border-color: black;
   float: left;
   border: none;
   outline: none;
