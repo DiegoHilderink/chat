@@ -41,4 +41,9 @@ body {
 }
 .message-form__button {
   margin: 10px;
+  border: none;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 13px;
+  padding: 15px;
 }
