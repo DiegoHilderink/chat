@@ -4,7 +4,7 @@ Chat realizado en bases de **JQuery**, **HTML** y **CSS**.
 Se emplea la **API ScaleDrone** para el envío de datos asíncronos.
 
 
-Deberá ejecutar `npm install jquery` para agregar las dependencias necesarias o comentar la llamada al código de llamada al módulo de jquery y decomentar el script de enlace url a jquery.
+Deberá ejecutar `npm install` para agregar las dependencias necesarias o comentar la llamada al código de llamada al módulo de jquery y decomentar el script de enlace url a jquery.
 
 ```
 <!-- <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script> -->
@@ -39,7 +39,7 @@ const drone = setScaleDrone(           // Generación de usuario
 
 * Los nombres por ahora son generados de forma aleatoria. Más tarde será implementada una base de datos que recoja los usuarios de esta.
 
-##### aux.js
+##### code.js
 * Contiene todo lo relacionado a las funciones relativas como `getRandomName()` o `getRandomColor`. 
 
 * Actualiza el DOM en caso de recibir nuevos datos.
